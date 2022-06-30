@@ -26,36 +26,35 @@
             Check Status: <input type="text" placeholder="Order number">
             <div class="cart">
                 <h3>Your Cart</h3>
+
                 <div class="cart-item">
-                    <div class="cart-div"><img class="cart-img" src="images/ramen1.jpg" alt="Tonkotsu Original Ramen"></div>
-                    <div class="cart-div">
-                        <h3>Tonkotsu Original Ramen ($9.9)</h3>
-                        <p class="grey-text">+ 1 Hanjuku (Soft-boiled) Egg ($0.9)</p>
-                        <p class="grey-text">+ 2 Karaage (3pcs) ($2.7)</p>
+                    <div class="columns">
+                        <div class="cart-div"><img class="cart-img" src="images/ramen1.jpg" alt="Tonkotsu Original Ramen"></div>
+                        <div class="cart-div cart-div-item">
+                            <h3>Tonkotsu Original Ramen ($9.9)</h3>
+                            <p class="grey-text">+ 1 Hanjuku (Soft-boiled) Egg ($0.9)</p>
+                            <p class="grey-text">+ 2 Karaage (3pcs) ($2.7)</p>
+                        </div>
                     </div>
-                    <div>
-                        - 1 +
-                    </div>
-                    <div class="cart-div cart-price">
-                        <h3>$20.90</h3>
+                    <div class="columns">               
+                        <div class="cart-div cart-div-item columns show">
+                            <div class="cart-quantity cart-quantity-btn"><i class="fa-solid fa-minus"></i></div>
+                            <div class="cart-quantity">1</div>
+                            <div class="cart-quantity cart-quantity-btn"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="cart-div cart-div-item cart-price">
+                            <h3>$20.90</h3>
+                            <div class="columns hide">
+                                <div class="cart-quantity cart-quantity-btn"><i class="fa-solid fa-minus"></i></div>
+                                <div class="cart-quantity">1</div>
+                                <div class="cart-quantity cart-quantity-btn"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="cart-item">
-                    <div class="cart-div"><img class="cart-img" src="images/ramen1.jpg" alt="Tonkotsu Original Ramen"></div>
-                    <div class="cart-div">
-                        <h3>Tonkotsu Original Ramen ($9.9)</h3>
-                        <p class="grey-text">+ 1 Hanjuku (Soft-boiled) Egg ($0.9)</p>
-                        <p class="grey-text">+ 2 Karaage (3pcs) ($2.7)</p>
-                    </div>
-                    <div>
-                        - 1 +
-                    </div>
-                    <div class="cart-div cart-price">
-                        <h3>$20.90</h3>
-                    </div>
-                </div>
+
                 <h3 class="subtotal">Subtotal: $41.80</h3>
-                <p class="grey-text subtotal">Please proceed to counter for payment</p>
+                <p class="grey-text subtotal">Please proceed to counter for payment after confirming order</p>
                 <button class="confirm-btn">Confirm Order for Self-Pickup</button>
             </div>
         </div>

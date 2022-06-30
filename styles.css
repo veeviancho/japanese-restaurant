@@ -1,5 +1,6 @@
 :root {
     --primary: #CD0000;
+    --borderColor: rgb(209, 209, 209);
     --textSize: 18px;
 }
 
@@ -74,7 +75,7 @@ nav .search-bar::placeholder {
 
 nav .selected {
     font-weight: bold;
-    border-bottom: 4px var(--primary) solid;
+    border-bottom: 4px var(-Color) solid;
 }
 
 select {
@@ -100,7 +101,7 @@ select {
 }
 
 .cart-item {
-    border: 1px rgb(209, 209, 209) solid;
+    border: 1px var(--borderColor) solid;
     border-radius: 5px;
     padding: 1em 1.5em;
     display: flex;
@@ -108,21 +109,44 @@ select {
     justify-content: space-between;
 }
 
-.cart-div:nth-child(odd) {
+/* .cart-div:nth-child(odd) {
     flex-grow: 0;
     min-width: 20%;
-}
+} */
+
+/* .cart-div:nth-child(even) {
+    flex-grow: 2;
+} */
 
 .cart-div > h3 {
     margin-top: 0.5em;
 }
 
-.cart-div:nth-child(even) {
-    flex-grow: 2;
+
+.cart-div-item {
+    padding: 0 2em;
 }
 
 .cart-price {
     text-align: right;
+}
+
+.cart-quantity {
+    padding: 10px;
+    height: 20px;
+}
+
+.cart-quantity-btn {
+    color: var(--borderColor);
+    cursor: pointer;
+}
+
+.cart-quantity-btn:hover {
+    color: black;
+}
+
+.columns {
+    display: flex;
 }
 
 .confirm-btn {
@@ -145,6 +169,10 @@ select {
 .grey-text {
     color: rgb(79, 78, 78);
     margin: 0 1em 0.5em 1em; 
+}
+
+.hide {
+    display: none;
 }
 
 .home-img {
@@ -346,20 +374,21 @@ select {
     padding-top: 120px;
 }
 
-.order-summary {
-    display: flex;
+.paid {
+    color: white;
+    padding: 0.5em 0.8em;
 }
 
-.paid-fail {
+.fail {
     background-color: var(--primary);
-    color: white;
-    padding: 0.5em 0.8em;
 }
 
-.paid-success {
+.success {
     background-color: #1c7763;
-    color: white;
-    padding: 0.5em 0.8em;
+}
+
+.loading {
+    background-color: #efb135;
 }
 
 .plain-bg {
@@ -419,6 +448,21 @@ select {
     .modal-menu {
         grid-template-columns: auto auto auto;
     }
+    .cart-img {
+        display: none;
+    }
+    .cart-item {
+        padding: 0;
+    }
+    .cart {
+        padding: 1em;
+    }
+    .cart > h3 {
+        margin-top: 0;
+    }
+    .cart-div-item {
+        padding: 0.5em 1em;
+    }
 }
 
 @media (max-width: 675px) {
@@ -441,5 +485,25 @@ select {
     }
     .modal-menu {
         grid-template-columns: auto auto;
+    }
+    .show {
+        display: none;
+    }
+    .hide {
+        display: flex;
+    }
+    .inline {
+        display: block;
+        margin: 16px 0;
+        padding: 0;
+    }
+
+    .cart {
+        font-size: 16px;
+    }
+
+    .cart-quantity {
+        padding: 5px;
+        height: 10px;
     }
 }
